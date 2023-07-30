@@ -153,7 +153,7 @@ class DefaultController():
             -
         """
         check = '*'
-        check_options = ['a', 'b', 'c', 'q', '*']
+        check_options = ['1', '2', '3', 'q', '*']
         if check.lower() in check_options:
             self.view.clean_screen()
             print(self.view_stage.get_stage)
