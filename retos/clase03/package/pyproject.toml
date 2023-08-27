@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "multi_maths"
+version = "1.0.7"
+authors = [
+  { name="Gonzalo Mahserdjian", email="gsmx64@outlook.com" },
+]
+description = "An arithmetic, geometry & statistics package."
+readme = "README.md"
+requires-python = ">=3.7"
+license = {text = "GNU/GPL version 3"}
+keywords = ["multi maths", "arithmetic", "geometry", "statistics"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: GNU General Public License v3 (GPLv3)",
+    "Operating System :: OS Independent",
+]
+
+[project.entry-points."multi_maths"]
+multi_maths = "multi_maths:main"
+
+[project.scripts]
+multi_maths = "multi_maths.cli:main"
+
+[tool.setuptools]
+# If there are data files included in your packages that need to be
+# installed, specify them here.
+package-data = {"multi_maths" = ["languages/*", "mm_arithmetic", "mm_geometry", "mm_statistics"]}
+
+[project.urls]
+"Homepage" = "https://github.com/gsmx64/python-adv-bootcamp-cf/tree/main/class03/challenge"
+"Bug Tracker" = "https://github.com/gsmx64/python-adv-bootcamp-cf/issues"
